@@ -8,7 +8,7 @@ class AppTheme {
   static final AppTextStyle _textStyle = AppTextStyle.instance;
 
   static ThemeData light = ThemeData(
-    fontFamily: 'Poppins',
+    fontFamily: 'SFPro',
     brightness: Brightness.light,
     primaryColor: AppColor.primaryColor,
     scaffoldBackgroundColor: AppColor.primaryColor,

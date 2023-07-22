@@ -80,11 +80,11 @@ flutter:
   fonts:
     - family: SfPro
       fonts:
-        - asset: fonts/SFPRODISPLAYREGULAR.otf
+        - asset: fonts/sfpro_display_regular.otf
           weight: 400
-        - asset: fonts/SFPRODISPLAYMEDIUM.otf
+        - asset: fonts/sfpro_display_medium.otf
           weight: 500
-        - asset: fonts/SFPRODISPLAYBOLD.otf
+        - asset: fonts/sfpro_display_bold.otf
           weight: 700
 
   #

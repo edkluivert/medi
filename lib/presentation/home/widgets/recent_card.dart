@@ -8,11 +8,11 @@ import '../../../core/config/app_textstyles.dart';
 import '../../../core/utils/custom_page_route.dart';
 import '../../detail/pages/detail_screen.dart';
 
-class RecommendedCard extends StatelessWidget {
+class RecentCard extends StatelessWidget {
 
   final List<Color> imageBg;
 
-  const RecommendedCard({super.key, required this.imageBg});
+  const RecentCard({super.key, required this.imageBg});
 
   static final AppTextStyle _textStyle = AppTextStyle.instance;
 
@@ -21,20 +21,16 @@ class RecommendedCard extends StatelessWidget {
     var size = MediaQuery.sizeOf(context);
     return Material(
       shadowColor: Colors.grey[50],
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(26)),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: Container(
-        width: size.width/1.3,
+        width: size.width/2,
         decoration: BoxDecoration(
-         borderRadius: BorderRadius.circular(26),
+         borderRadius: BorderRadius.circular(20),
           gradient: LinearGradient(
             colors: imageBg,
             begin: Alignment.bottomLeft,
             end: Alignment.topRight,
           ),
-         //  image: DecorationImage(
-         //    //image: AssetImage(ImageUtil.getImagePath(imageBg)),
-         //    fit: BoxFit.cover
-         //  )
         ),
         child: Material(
           type: MaterialType.transparency,
@@ -43,34 +39,21 @@ class RecommendedCard extends StatelessWidget {
           shadowColor: Colors.grey[50],
           child: InkWell(
             onTap: (){
-               final detail = DetailScreen();
-               Navigator.of(context).push(CustomPageRoute(detail));
+              final detail = DetailScreen();
+              Navigator.of(context).push(CustomPageRoute(detail));
             },
             splashColor: Colors.white30,
             borderRadius: BorderRadius.circular(26),
             child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 24),
+              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(sleepMedStr, style: _textStyle.displayLarge.copyWith(
-                          fontSize: 22
-                      ),),
-                      Text(sleepSubTitle, style: _textStyle.displayMedium),
-                    ],
-                  ),
-
-                  Row(
-                    children: [
-                      SvgPicture.asset(ImageUtil.getIconPath(audioIC)),
-                      SizedBox(width: 20,),
-                      SvgPicture.asset(ImageUtil.getIconPath(videoIC)),
-                    ],
-                  )
+                  Text(sleepMedStr, style: _textStyle.displayLarge.copyWith(
+                      fontSize: 22
+                  ),),
+                  SvgPicture.asset(ImageUtil.getIconPath(audioIC)),
                 ],
               ),
             ),
