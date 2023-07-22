@@ -8,4 +8,5 @@ class AppColor {
 
   static Color accentColor = const Color(0xFF4A80F0);
 
+  static Color tabBgColor = const Color(0xFF1C2031);
 }

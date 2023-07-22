@@ -1,4 +1,6 @@
 const String discoverStr = 'Discover';
+const String sleepMedStr = 'Sleep Meditation';
+const String sleepSubTitle = '7 Day Audio and Video Series';
 
 
 
